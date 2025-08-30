@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملف الإنجاز الإلكتروني</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>ملف الإنجاز الإلكتروني</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">الرئيسية</a>
+                <a href="#cv" class="nav-link">السيرة الذاتية</a>
+                <a href="#development" class="nav-link">التطوير المهني</a>
+                <a href="#courses" class="nav-link">ملف المادة</a>
+                <a href="#projects" class="nav-link">الأنشطة والمشاريع</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">ملف الإنجاز الإلكتروني</div>
+            <h1 class="hero-title">أ. [اسم المعلم/ة]</h1>
+            <h2 class="hero-subtitle">معلم/ة المهارات الرقمية</h2>
+            <p class="hero-description">
+                متخصص في تطوير المهارات الرقمية والتقنية الرقمية - خبرة في التعليم والتدريب التقني
+            </p>
+            <div class="hero-skills">
+                <span class="skill-tag"><i class="fas fa-code"></i> البرمجة</span>
+                <span class="skill-tag"><i class="fas fa-database"></i> قواعد البيانات</span>
+                <span class="skill-tag"><i class="fas fa-globe"></i> تطوير الويب</span>
+                <span class="skill-tag"><i class="fas fa-microchip"></i> التقنيات الرقمية</span>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('content')">
+                    <i class="fas fa-eye"></i>
+                    استكشف الملف
+                </button>
+                <button class="btn btn-secondary" onclick="downloadCV()">
+                    <i class="fas fa-download"></i>
+                    تحميل السيرة الذاتية
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Overview -->
+    <section id="content" class="content-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2>محتويات الملف</h2>
+                <p>بسم الله الرحمن الرحيم، الحمد لله الذي بنعمته تتم الصالحات. يسرني أن أقدم لكم ملف إنجازي الذي يوثق رحلتي التعليمية والمهنية في مجال المهارات الرقمية.</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-card" data-section="cv">
+                    <div class="card-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>السيرة الذاتية</h3>
+                    <p>المعلومات الشخصية والمؤهلات التعليمية والخبرات المهنية</p>
+                    <ul>
+                        <li>المعلومات الشخصية</li>
+                        <li>المؤهلات التعليمية</li>
+                        <li>الخبرات المهنية</li>
+                        <li>المهارات والقدرات</li>
+                    </ul>
+                    <button class="card-btn" onclick="scrollToSection('cv')">عرض التفاصيل</button>
+                </div>
+
+                <div class="content-card" data-section="development">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>التطوير المهني</h3>
+                    <p>الدورات التدريبية والشهادات والمشاركات في المؤتمرات</p>
+                    <ul>
+                        <li>الدورات التدريبية</li>
+                        <li>الشهادات المهنية</li>
+                        <li>المؤتمرات والندوات</li>
+                        <li>ورش العمل</li>
+                    </ul>
+                    <button class="card-btn" onclick="scrollToSection('development')">عرض التفاصيل</button>
+                </div>
+
+                <div class="content-card" data-section="courses">
+                    <div class="card-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>ملف المادة</h3>
+                    <p>محتوى مقررات المهارات الرقمية والتقنية الرقمية</p>
+                    <ul>
+                        <li>توصيف المقرر</li>
+                        <li>خطة التدريس</li>
+                        <li>المحاضرات والدروس</li>
+                        <li>الأنشطة التفاعلية</li>
+                    </ul>
+                    <button class="card-btn" onclick="scrollToSection('courses')">عرض التفاصيل</button>
+                </div>
+
+                <div class="content-card" data-section="projects">
+                    <div class="card-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>الأنشطة والمشاريع</h3>
+                    <p>المشاريع التقنية والأنشطة الطلابية والابتكارات</p>
+                    <ul>
+                        <li>المشاريع التقنية</li>
+                        <li>الأنشطة الطلابية</li>
+                        <li>التطبيقات العملية</li>
+                        <li>الابتكارات والحلول</li>
+                    </ul>
+                    <button class="card-btn" onclick="scrollToSection('projects')">عرض التفاصيل</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-user"></i> السيرة الذاتية</h2>
+                <p>معلومات شاملة عن الخلفية الأكاديمية والمهنية</p>
+            </div>
+            <div class="cv-content">
+                <div class="cv-section">
+                    <h3><i class="fas fa-info-circle"></i> المعلومات الشخصية</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <strong>الاسم:</strong> [اسم المعلم/ة الكامل]
+                        </div>
+                        <div class="info-item">
+                            <strong>التخصص:</strong> المهارات الرقمية والتقنية الرقمية
+                        </div>
+                        <div class="info-item">
+                            <strong>البريد الإلكتروني:</strong> [البريد الإلكتروني]
+                        </div>
+                        <div class="info-item">
+                            <strong>الهاتف:</strong> [رقم الهاتف]
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3><i class="fas fa-graduation-cap"></i> المؤهلات التعليمية</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2020</div>
+                            <div class="timeline-content">
+                                <h4>بكالوريوس هندسة الحاسب</h4>
+                                <p>جامعة [اسم الجامعة] - تقدير ممتاز</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2022</div>
+                            <div class="timeline-content">
+                                <h4>دبلوم التربية</h4>
+                                <p>كلية التربية - جامعة [اسم الجامعة]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3><i class="fas fa-briefcase"></i> الخبرات المهنية</h3>
+                    <div class="experience-list">
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h4>معلم/ة المهارات الرقمية</h4>
+                                <span class="experience-period">2022 - حتى الآن</span>
+                            </div>
+                            <p class="experience-company">[اسم المدرسة/المؤسسة]</p>
+                            <ul class="experience-duties">
+                                <li>تدريس مقررات المهارات الرقمية والتقنية الرقمية</li>
+                                <li>تطوير المناهج والمواد التعليمية</li>
+                                <li>إشراف على المشاريع التقنية للطلاب</li>
+                                <li>تنظيم ورش عمل تقنية</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3><i class="fas fa-cogs"></i> المهارات التقنية</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4><i class="fas fa-code"></i> البرمجة</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">React</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-database"></i> قواعد البيانات</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">SQL Server</span>
+                                <span class="skill-tag">Firebase</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-globe"></i> تطوير الويب</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">API Design</span>
+                                <span class="skill-tag">Responsive Design</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-microchip"></i> التقنيات الرقمية</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Cloud Computing</span>
+                                <span class="skill-tag">AI/ML</span>
+                                <span class="skill-tag">IoT</span>
+                                <span class="skill-tag">Cybersecurity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Development Section -->
+    <section id="development" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> التطوير المهني</h2>
+                <p>الدورات التدريبية والشهادات المهنية والمشاركات العلمية</p>
+            </div>
+            <div class="development-content">
+                <div class="development-category">
+                    <h3><i class="fas fa-certificate"></i> الدورات التدريبية</h3>
+                    <div class="course-list">
+                        <div class="course-item">
+                            <h4>دورة تطوير تطبيقات الويب المتقدمة</h4>
+                            <p class="course-provider">معهد التدريب التقني</p>
+                            <span class="course-date">2023</span>
+                        </div>
+                        <div class="course-item">
+                            <h4>دورة الذكاء الاصطناعي في التعليم</h4>
+                            <p class="course-provider">جامعة الملك سعود</p>
+                            <span class="course-date">2023</span>
+                        </div>
+                        <div class="course-item">
+                            <h4>دورة أمن المعلومات والحماية السيبرانية</h4>
+                            <p class="course-provider">الهيئة السعودية للبيانات والذكاء الاصطناعي</p>
+                            <span class="course-date">2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="development-category">
+                    <h3><i class="fas fa-award"></i> الشهادات المهنية</h3>
+                    <div class="certificate-list">
+                        <div class="certificate-item">
+                            <h4>شهادة مطور ويب معتمد</h4>
+                            <p class="certificate-issuer">مايكروسوفت</p>
+                            <span class="certificate-date">2023</span>
+                        </div>
+                        <div class="certificate-item">
+                            <h4>شهادة أساسيات الذكاء الاصطناعي</h4>
+                            <p class="certificate-issuer">Google</p>
+                            <span class="certificate-date">2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="development-category">
+                    <h3><i class="fas fa-users"></i> المؤتمرات والندوات</h3>
+                    <div class="conference-list">
+                        <div class="conference-item">
+                            <h4>مؤتمر التعليم الرقمي السعودي</h4>
+                            <p class="conference-role">متحدث رئيسي</p>
+                            <span class="conference-date">2023</span>
+                        </div>
+                        <div class="conference-item">
+                            <h4>ندوة مستقبل التقنية في التعليم</h4>
+                            <p class="conference-role">مشارك</p>
+                            <span class="conference-date">2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Materials Section -->
+    <section id="courses" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-book"></i> ملف المادة</h2>
+                <p>محتوى شامل لمقررات المهارات الرقمية والتقنية الرقمية</p>
+            </div>
+            <div class="courses-content">
+                <div class="course-overview">
+                    <h3><i class="fas fa-file-alt"></i> توصيف المقرر</h3>
+                    <div class="course-description">
+                        <p>يهدف مقرر المهارات الرقمية إلى تزويد الطلاب بالمعارف والمهارات الأساسية في استخدام التقنيات الرقمية الحديثة، وتطوير قدراتهم في حل المشكلات باستخدام الأدوات التقنية المختلفة.</p>
+                    </div>
+                </div>
+
+                <div class="teaching-plan">
+                    <h3><i class="fas fa-calendar-alt"></i> خطة التدريس</h3>
+                    <div class="plan-timeline">
+                        <div class="plan-item">
+                            <div class="plan-week">الأسبوع 1-2</div>
+                            <div class="plan-content">
+                                <h4>مقدمة في المهارات الرقمية</h4>
+                                <p>التعريف بالمفاهيم الأساسية والأدوات الرقمية</p>
+                            </div>
+                        </div>
+                        <div class="plan-item">
+                            <div class="plan-week">الأسبوع 3-4</div>
+                            <div class="plan-content">
+                                <h4>أساسيات البرمجة</h4>
+                                <p>تعلم مبادئ البرمجة باستخدام Python</p>
+                            </div>
+                        </div>
+                        <div class="plan-item">
+                            <div class="plan-week">الأسبوع 5-6</div>
+                            <div class="plan-content">
+                                <h4>تطوير الويب</h4>
+                                <p>HTML, CSS, JavaScript الأساسيات</p>
+                            </div>
+                        </div>
+                        <div class="plan-item">
+                            <div class="plan-week">الأسبوع 7-8</div>
+                            <div class="plan-content">
+                                <h4>قواعد البيانات</h4>
+                                <p>تصميم وإدارة قواعد البيانات</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lectures">
+                    <h3><i class="fas fa-play-circle"></i> المحاضرات والدروس</h3>
+                    <div class="lecture-list">
+                        <div class="lecture-item">
+                            <div class="lecture-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="lecture-content">
+                                <h4>محاضرة 1: مقدمة في البرمجة</h4>
+                                <p>شرح المفاهيم الأساسية للبرمجة والخوارزميات</p>
+                                <span class="lecture-duration">45 دقيقة</span>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="lecture-content">
+                                <h4>محاضرة 2: أساسيات HTML و CSS</h4>
+                                <p>تعلم بناء صفحات الويب الأساسية</p>
+                                <span class="lecture-duration">60 دقيقة</span>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="lecture-content">
+                                <h4>محاضرة 3: مقدمة في JavaScript</h4>
+                                <p>البرمجة التفاعلية لصفحات الويب</p>
+                                <span class="lecture-duration">50 دقيقة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-project-diagram"></i> الأنشطة والمشاريع</h2>
+                <p>مجموعة من المشاريع التقنية والأنشطة التعليمية المبتكرة</p>
+            </div>
+            <div class="projects-content">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>موقع تعليمي تفاعلي</h3>
+                            <p>تطوير منصة تعليمية تفاعلية لتدريس المهارات الرقمية باستخدام تقنيات الويب الحديثة</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="project-btn">عرض المشروع</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>تطبيق إدارة الطلاب</h3>
+                            <p>تطبيق محمول لإدارة بيانات الطلاب وتتبع تقدمهم الأكاديمي</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="project-btn">عرض المشروع</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>نظام ذكي للتقييم</h3>
+                            <p>نظام تقييم ذكي يستخدم الذكاء الاصطناعي لتحليل أداء الطلاب وتقديم التوصيات</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">TensorFlow</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="project-btn">عرض المشروع</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>لعبة تعليمية تفاعلية</h3>
+                            <p>لعبة تعليمية لتعلم البرمجة بطريقة ممتعة وتفاعلية للطلاب</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Unity</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Game Design</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="project-btn">عرض المشروع</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activities-section">
+                    <h3><i class="fas fa-users"></i> الأنشطة الطلابية</h3>
+                    <div class="activities-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>مسابقة البرمجة السنوية</h4>
+                                <p>تنظيم مسابقة برمجة على مستوى المدرسة لتحفيز الطلاب على التعلم</p>
+                                <span class="activity-date">2023</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>ورشة الابتكار التقني</h4>
+                                <p>ورشة عمل لتطوير الأفكار الإبداعية وتحويلها إلى مشاريع تقنية</p>
+                                <span class="activity-date">2023</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4>نادي البرمجة</h4>
+                                <p>نادي أسبوعي لتعليم البرمجة والتقنيات الحديثة للطلاب المهتمين</p>
+                                <span class="activity-date">مستمر</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ملف الإنجاز الإلكتروني</h3>
+                    <p>رحلة تعليمية ومهنية في مجال المهارات الرقمية والتقنية الرقمية</p>
+                </div>
+                <div class="footer-section">
+                    <h4>التواصل</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> [البريد الإلكتروني]</p>
+                        <p><i class="fas fa-phone"></i> [رقم الهاتف]</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#cv">السيرة الذاتية</a></li>
+                        <li><a href="#development">التطوير المهني</a></li>
+                        <li><a href="#projects">المشاريع</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ملف الإنجاز الإلكتروني. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
